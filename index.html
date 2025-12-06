@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रवि प्रताप सिंह - प्रधान पद हेतु प्रचार</title>
+    <style>
+        /* 4-5 रंगों का उपयोग: नारंगी (#FF9933), हरा (#138808), नीला (#000080), सफ़ेद (#FFFFFF), गोल्ड (#FFD700) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column; /* मुख्य कंटेनर को वर्टिकल अलाइनमेंट के लिए */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        /* विज्ञापन स्लॉट स्टाइलिंग */
+        .ad-slot {
+            width: 468px; /* विज्ञापन साइज़ */
+            height: 60px; /* विज्ञापन साइज़ */
+            background-color: #555; /* डार्क ग्रे/भूरा बैकग्राउंड */
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* प्रचार पोस्टर कंटेनर स्टाइलिंग */
+        .poster-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #FFFFFF;
+            border: 10px solid #FF9933; /* नारंगी बॉर्डर */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            padding-bottom: 20px;
+            /* ताकि यह विज्ञापन स्लॉट से छोटा दिखे */
+            margin: 10px 0; 
+        }
+        .header-gp {
+            background-color: #138808; /* हरा बैकग्राउंड */
+            color: #FFFFFF;
+            padding: 15px 10px;
+            font-size: 1.6em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .photo-area {
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #FFD700; /* गोल्ड बॉर्डर */
+        }
+        .photo-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Placeholder styling */
+            background-color: #ccc;
+        }
+        .candidate-name {
+            font-size: 2.8em;
+            font-weight: 900;
+            color: #000080; /* नीला रंग */
+            margin-bottom: 25px;
+            line-height: 1.2;
+            padding: 0 10px;
+        }
+        .pledge-box {
+            background-color: #fff8e1; /* हल्का पीला */
+            border: 3px dashed #FF9933; /* नारंगी डैश बॉर्डर */
+            padding: 20px;
+            margin: 0 20px 30px;
+            font-size: 1.15em;
+            color: #333;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        .pledge-box strong {
+            color: #138808; /* हरा */
+            font-size: 1.2em;
+        }
+        .call-to-action {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FF9933; /* नारंगी */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .support-section {
+            padding: 10px 20px;
+            border-top: 2px solid #eee;
+        }
+        #supporterName {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #000080;
+            border-radius: 8px;
+            font-size: 1em;
+            text-align: center;
+        }
+        #whatsappShare {
+            background-color: #138808; /* WhatsApp हरा */
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        #whatsappShare:hover {
+            background-color: #0e6b05;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- TOP ADS SLOT (468x60) -->
+    <div class="ad-slot" id="topAdSlot">
+      <script type="text/javascript">
+  atOptions = {
+  	'key' : '7801bc520042851764952a839f179dec',
+  	'format' : 'iframe',
+  	'height' : 60,
+  	'width' : 468,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src="//reliableguardianindifference.com/7801bc520042851764952a839f179dec/invoke.js"
+></script>
+    </div>
+
+    <div class="poster-container">
+
+        <!-- सबसे ऊपर ग्राम पंचायत का नाम -->
+        <div class="header-gp">ग्राम पंचायत ** हुलास खेड़ा**</div>
+        <div class="call-to-action">
+           ग्राम पंचायत हुलास खेड़ा से प्रधान पद प्रत्याशी 
+        </div>
+        <!-- प्रधानी प्रत्याशी का फोटो -->
+        <div class="photo-area">
+            <!-- सुनिश्चित करें कि 'pradhan_photo.jpg' नाम की फोटो इसी फ़ोल्डर में मौजूद है -->
+            <img id="candidatePhoto" src="pradhan_photo.jpg" alt="रवि प्रताप सिंह का फोटो"> 
+        </div>
+
+        <!-- प्रत्याशी का नाम (Big Size) -->
+        <div class="candidate-name">रवि प्रताप सिंह</div>
+
+        <!-- शपथ/आश्वासन बॉक्स -->
+        <div class="pledge-box">
+            मैं ** रवि प्रताप सिंह**, गाँव के हर नागरिक को आश्वस्त करता हूँ कि मेरे लिए ** गाँव की सेवा ही मेरा धर्म है!**
+        </div>
+
+        <!-- विजयी बनाने हेतु अपील -->
+        <div class="call-to-action">
+           ग्राम पंचायत हुलास खेड़ा रवि प्रताप सिंह को भारी मतों से विजयी बनायें।
+        </div>
+        
+        <!-- भेजने वाले का नाम लिखने का विकल्प और WhatsApp शेयर बटन -->
+        <div class="support-section">
+            <input type="text" id="supporterName" placeholder="अपना नाम यहाँ लिखें (आपका नाम दिखेगा)">
+            <button id="whatsappShare">
+                 मैं समर्थन करता हूं और इस मैसेज को शेयर करता हूं
+            </button>
+        </div>
+
+    </div>
+    
+    <!-- BOTTOM ADS SLOT (468x60) -->
+    <div class="ad-slot" id="bottomAdSlot">
+     <script type="text/javascript">
+  atOptions = {
+  	'key' : '7801bc520042851764952a839f179dec',
+  	'format' : 'iframe',
+  	'height' : 60,
+  	'width' : 468,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src="//reliableguardianindifference.com/7801bc520042851764952a839f179dec/invoke.js"
+></script>
+    </div>
+
+    <script>
+    document.getElementById('whatsappShare').addEventListener('click', function() {
+        const supporterNameInput = document.getElementById('supporterName').value;
+        let supporter = supporterNameInput.trim();
+        
+        // वर्तमान पेज का लिंक प्राप्त करना
+        const pageLink = window.location.href; 
+        
+        // अगर नाम खाली हो, तो डिफ़ॉल्ट टेक्स्ट सेट करें
+        if (supporter === "") {
+            supporter = "एक जागरूक समर्थक";
+        }
+        
+        // WhatsApp मैसेज का कंटेंट तैयार करना
+        // ध्यान दें: supporter वेरिएबल का उपयोग अब मैसेज में हो रहा है
+        const campaignMsg = 
+            `*🙌 यह मैसेज *${supporter}* द्वारा शेयर किया गया है 🙌*\n\n` + // शेयर करने वाले का नाम सबसे ऊपर
+            `*⚡️ग्राम पंचायत: हुलस खेड़ा⚡️*\n` +
+            `*👑 प्रधान पद के उम्मीदवार: रवि प्रताप सिंह 👑*\n\n` +
+            `मैं *${supporter}*, रवि प्रताप सिंह का तहे दिल से समर्थन करता हूँ और पूरे गाँव से निवेदन करता हूँ कि उन्हें भारी मतों से विजयी बनाएं।\n\n` +
+            `*उनका वादा:*\n` +
+            `_"मैं रवि प्रताप सिंह, गाँव के हर नागरिक को आश्वस्त करता हूँ कि मेरे लिए गाँव की सेवा ही मेरा धर्म है!"_\n\n` +
+            `*🤝 (मैं समर्थन करता हूँ और इस मैसेज को शेयर करता हूँ) 🤝*\n\n` + 
+            `*👉 आप भी समर्थन करने और यह पोस्टर देखने के लिए यहाँ क्लिक करें:*\n` + // शेयरिंग लिंक के लिए टेक्स्ट
+            `${pageLink}` // शेयरिंग लिंक (वर्तमान पेज का URL)
+        ;
+        
+        // WhatsApp शेयर लिंक बनाना
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(campaignMsg)}`;
+        
+        // WhatsApp को नए टैब में खोलना
+        window.open(whatsappUrl, '_blank');
+    });
+</script>
+
+</body>
+</html>
