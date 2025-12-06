@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -203,30 +203,65 @@
     </div>
 
     <script>
+    // ----------------------------------------------------
+    // 1. URL से 'sharer' पैरामीटर पढ़ना और होमपेज पर नाम दिखाना
+    // ----------------------------------------------------
+    function displaySharerName() {
+        // URL से सभी पैरामीटर प्राप्त करना
+        const urlParams = new URLSearchParams(window.location.search);
+        // 'sharer' पैरामीटर की वैल्यू प्राप्त करना
+        let sharerName = urlParams.get('sharer');
+
+        if (sharerName) {
+            // URL में एन्कोड किए गए नाम को डीकोड करना (जैसे %20 को स्पेस में बदलना)
+            sharerName = decodeURIComponent(sharerName);
+            
+            const messageElement = document.getElementById('sharerMessage');
+            if (messageElement) {
+                // मैसेज तैयार करना
+                messageElement.innerHTML = `आप को यह संदेश **${sharerName}** द्वारा भेजा गया है।`;
+                // एलिमेंट को दिखाना
+                messageElement.style.display = 'block';
+                
+                // इनपुट बॉक्स को भी उस नाम से भर सकते हैं (वैकल्पिक)
+                // document.getElementById('supporterName').value = sharerName;
+            }
+        }
+    }
+
+    // पेज लोड होने पर यह फंक्शन चलाएं
+    displaySharerName();
+    
+    // ----------------------------------------------------
+    // 2. WhatsApp शेयर बटन पर क्लिक होने पर
+    // ----------------------------------------------------
     document.getElementById('whatsappShare').addEventListener('click', function() {
         const supporterNameInput = document.getElementById('supporterName').value;
         let supporter = supporterNameInput.trim();
-        
-        // वर्तमान पेज का लिंक प्राप्त करना
-        const pageLink = window.location.href; 
         
         // अगर नाम खाली हो, तो डिफ़ॉल्ट टेक्स्ट सेट करें
         if (supporter === "") {
             supporter = "एक जागरूक समर्थक";
         }
         
+        // नाम को URL-एन्कोड करना ताकि यह लिंक में सुरक्षित रूप से जा सके
+        const encodedSupporter = encodeURIComponent(supporter); 
+        
+        // वर्तमान पेज का लिंक प्राप्त करना और उसमें sharer पैरामीटर जोड़ना
+        // यह सुनिश्चित करता है कि जब कोई इस लिंक पर क्लिक करेगा, तो उसका नाम दिखेगा
+        const pageLink = window.location.origin + window.location.pathname + `?sharer=${encodedSupporter}`; 
+        
         // WhatsApp मैसेज का कंटेंट तैयार करना
-        // ध्यान दें: supporter वेरिएबल का उपयोग अब मैसेज में हो रहा है
         const campaignMsg = 
-            `*🙌 यह मैसेज *${supporter}* द्वारा शेयर किया गया है 🙌*\n\n` + // शेयर करने वाले का नाम सबसे ऊपर
+            `*🙌 यह मैसेज *${supporter}* द्वारा शेयर किया गया है 🙌*\n\n` + 
             `*⚡️ग्राम पंचायत: हुलस खेड़ा⚡️*\n` +
             `*👑 प्रधान पद के उम्मीदवार: रवि प्रताप सिंह 👑*\n\n` +
             `मैं *${supporter}*, रवि प्रताप सिंह का तहे दिल से समर्थन करता हूँ और पूरे गाँव से निवेदन करता हूँ कि उन्हें भारी मतों से विजयी बनाएं।\n\n` +
             `*उनका वादा:*\n` +
             `_"मैं रवि प्रताप सिंह, गाँव के हर नागरिक को आश्वस्त करता हूँ कि मेरे लिए गाँव की सेवा ही मेरा धर्म है!"_\n\n` +
             `*🤝 (मैं समर्थन करता हूँ और इस मैसेज को शेयर करता हूँ) 🤝*\n\n` + 
-            `*👉 आप भी समर्थन करने और यह पोस्टर देखने के लिए यहाँ क्लिक करें:*\n` + // शेयरिंग लिंक के लिए टेक्स्ट
-            `${pageLink}` // शेयरिंग लिंक (वर्तमान पेज का URL)
+            `*👉 आप भी समर्थन करने और यह पोस्टर देखने के लिए यहाँ क्लिक करें:*\n` + 
+            `${pageLink}` // अब इसमें sharer पैरामीटर वाला लिंक है
         ;
         
         // WhatsApp शेयर लिंक बनाना
@@ -238,4 +273,4 @@
 </script>
 
 </body>
-</html>
+</html>       
